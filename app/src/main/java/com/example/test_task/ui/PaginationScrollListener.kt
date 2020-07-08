@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class PaginationScrollListener (
+class PaginationScrollListener(
     private val loadMore: () -> Unit,
     private val pageSize: Int
 ) : RecyclerView.OnScrollListener() {

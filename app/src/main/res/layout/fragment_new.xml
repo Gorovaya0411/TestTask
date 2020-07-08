@@ -3,11 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerMainNew"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayoutNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerMainNew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="32dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarNew"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewInternetNew"
+        android:layout_width="222dp"
+        android:layout_height="207dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/no_internet" />
+
+    <TextView
+        android:id="@+id/textViewInternetNew"
+        android:layout_width="135dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="15dp"
+        android:text="Oh shucks!"
+        android:textColor="#2D0A6A"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInternetNew" />
+
+    <TextView
+        android:id="@+id/textViewInternetNew2"
+        android:layout_width="239dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Slow or no internet connection. Please check your internet settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInternetNew" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

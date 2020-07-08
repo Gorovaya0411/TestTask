@@ -1,4 +1,4 @@
-package com.example.test_task.ui.activity
+package com.example.test_task.ui.scenes.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,8 +13,13 @@ class DetailedInformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailed_information)
         val getModelImageAnswer = intent.getSerializableExtra("KEY") as ImageAnswer
+        val link: String = "http://gallery.dev.webant.ru/media/${getModelImageAnswer.image.name}"
+        Picasso.get()
+            .load(link)
+            .fit()
+            .into(detailedImage)
         namePhoto.text = getModelImageAnswer.name
         descriptionPhoto.text = getModelImageAnswer.description
-        Picasso.get().load("http://gallery.dev.webant.ru/api/photos/media/ ${getModelImageAnswer.image.name}").fit().into(detailedImage)
+
     }
 }

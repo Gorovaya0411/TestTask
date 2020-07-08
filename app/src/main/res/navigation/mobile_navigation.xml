@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_new"
-        android:name="com.example.test_task.ui.fragmentMenu.NewFragment"
+        android:name="com.example.test_task.ui.scenes.fragmentMenu.newScenes.NewFragment"
         android:label="New"
         tools:layout="@layout/fragment_new" />
 
     <fragment
         android:id="@+id/navigation_popular"
-        android:name="com.example.test_task.ui.fragmentMenu.PopularFragment"
+        android:name="com.example.test_task.ui.scenes.fragmentMenu.popularScenes.PopularFragment"
         android:label="Popular"
         tools:layout="@layout/fragment_popular" />
 </navigation>
